@@ -20,24 +20,18 @@ function BookList() {
 }
 
 const Book = () => {
+  const title = 'Atal Bihari Vajpayee: A Man for All Seasons'
+  const author = 'Rishabh Jain'
+
   return (
-    <article>
-      <Image />
-      <Title />
-      <Author />
+    <article className="book">
+      <img src="https://m.media-amazon.com/images/I/715vXuwzxyL._AC_UY327_FMwebp_QL65_.jpg" alt="" />
+
+      <h1>{title}</h1>
+
+      <h4>{author}</h4>
     </article>
   )
 }
 
-const Image = () => {
-  return <img src="https://m.media-amazon.com/images/I/715vXuwzxyL._AC_UY327_FMwebp_QL65_.jpg" alt="" />
-}
-
-const Title = () => {
-  return <h1>Atal Bihari Vajpayee: A Man for All Seasons</h1>
-}
-
-const Author = () => {
-  return <h4>Rishabh Jain</h4>
-}
 ReactDOM.render(<BookList />, document.getElementById('root'));
