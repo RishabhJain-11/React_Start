@@ -23,17 +23,20 @@ const thirdBook = {
 function BookList() {
   return (
     <section className="booklist">
-      <Book 
+      <Book
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
-      />
-      <Book 
+      >
+      </Book>
+
+
+      <Book
         img={secondBook.img}
         title={secondBook.title}
         author={secondBook.author}
       />
-      <Book 
+      <Book
         img={thirdBook.img}
         title={thirdBook.title}
         author={thirdBook.author}
@@ -43,21 +46,20 @@ function BookList() {
 }
 
 const Book = (props) => {
+  const { img, title, author } = props;
+  const clickHandler = () => {
+    alert("Choose any of the books fast");
+  }
   return (
     <article className="book">
-      <img src={props.img} alt="" />
+      <img src={img} alt="" />
 
-      <h1>{props.title}</h1>
+      <h1 onClick={clickHandler}>{title}</h1>
 
-      <h4>{props.author}</h4>
+      <h4>{author}</h4>
+      <button type="button" onClick={clickHandler}>Reference Example</button>
     </article>
   )
 }
 
 ReactDOM.render(<BookList />, document.getElementById('root'));
-
-
-/**
- * Maharashtra = 23
- * TN = 25
- */
