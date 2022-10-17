@@ -14,6 +14,4 @@ function BookList() {
   );
 };
 
-
-
 ReactDOM.render(<BookList />, document.getElementById('root'));
